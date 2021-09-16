@@ -19,10 +19,13 @@ public class main {
     
   public static void main(String[] args){
       
-       int gameScore =0;
+       
        int max = 1;
        int min = 0;
        
+     
+       
+      
        Score score = Score.getInstance();
        
        Scanner scanner = new Scanner(System.in);
@@ -49,32 +52,72 @@ public class main {
        }
        }
        
+       int operator = 0;
+       
+       
        
        int range = max - min + 1;
-       
        
        for( int i =0; i< 10; i++){
             int numOne =  (int) (Math.random() * range) + min;
             int numTwo =  (int) (Math.random() * range) + min;
-
-            System.out.println("What is " + numOne +" + " + numTwo + "?");
             
-            String ans = scanner.nextLine();
+            operator  =(int) (Math.random()*(4-1+1)+1);
+            
+            switch (operator){
+            case 1:
+            System.out.println("What is " + numOne + " + " + numTwo + "?");
+            break;
+            case 2:
+            System.out.println("What is " + numOne + " - " + numTwo + "?");
+            break;
+            case 3:
+            System.out.println("What is " + numOne + " % " + numTwo + "?");
+            break;
+            case 4:
+            System.out.println("What is " + numOne + " * " + numTwo + "?");
+            break;
+            }
             
             int result =0;
+            
+            while(true){
+            String ans = scanner.nextLine();
             
             try{
             
             result = Integer.parseInt(ans);
+            break;
             }catch(NumberFormatException e){
                 System.out.println("Please Enter a vaild number");
             }
+            }
             
-            if ( (numOne + numTwo) == result) {
-               score.addScore();
-           }
+            switch (operator){
+            case 1:
+                if ( (numOne + numTwo) == result) {
+                   score.addScore();
+                }
+            break;
+            case 2:
+            if ( (numOne - numTwo) == result) {
+                   score.addScore();
+                }
+            break;
+            case 3:
+            if ( (numOne % numTwo) == result) {
+                   score.addScore();
+                }
+            break;
+            case 4:
+            if ( (numOne * numTwo) == result) {
+                   score.addScore();
+                }
+            break;
+            }
        }
         System.out.println("Your Total Score is " + score.getScore());
+        System.exit(0);
   }
   
   
