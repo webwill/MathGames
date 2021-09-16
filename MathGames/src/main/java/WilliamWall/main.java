@@ -22,9 +22,6 @@ public class main {
        
        int max = 1;
        int min = 0;
-       
-     
-       
       
        Score score = Score.getInstance();
        
@@ -52,7 +49,7 @@ public class main {
        }
        }
        
-       int operator = 0;
+       int operator;
        
        
        
