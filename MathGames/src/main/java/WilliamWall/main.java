@@ -23,6 +23,7 @@ public class main {
        int max = 1;
        int min = 0;
        
+       Score score = Score.getInstance();
        
        Scanner scanner = new Scanner(System.in);
        
@@ -66,15 +67,14 @@ public class main {
             
             result = Integer.parseInt(ans);
             }catch(NumberFormatException e){
-            
-                System.err.println("Please Enter a vaild number");
+                System.out.println("Please Enter a vaild number");
             }
             
             if ( (numOne + numTwo) == result) {
-               gameScore += 5;
+               score.addScore();
            }
        }
-        System.out.println("Your Total Score is " + gameScore);
+        System.out.println("Your Total Score is " + score.getScore());
   }
   
   
