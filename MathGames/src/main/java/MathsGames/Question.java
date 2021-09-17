@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package WilliamWall;
-
+package MathsGames;
 /**
  *
  * @author willi
@@ -35,17 +34,22 @@ public class Question {
      numOne =  (int) (Math.random() * range) + min;
      numTwo =  (int) (Math.random() * range) + min;
      operator =(int) (Math.random()*(4-1+1)+1);
-     /*
+     
      switch(operator){
          case 1:
              addQuestion();
          break;
          case 2:
              subQuestion();
-        break;            
+         break;
+         case 3:
+            multipleQuestion();
+         break;
+        case 4:
+            divideQuestion();
      }
-*/
-     addQuestion();
+
+  
     }
     
     public String getQuestion(){
@@ -53,18 +57,22 @@ public class Question {
     }
     
     public boolean answerQuestion(int ans){
+        //check user's answer againest actual answer
         return answer == ans;
     }
     
     
-    public Boolean answeredCorrently(){
-        return false;
-    }
+    public int getAnswer(){return answer;}
     
     private void addQuestion(){
      question =  numOne + " + " + numTwo + "?";
      answer = numOne + numTwo;
     }
     private void subQuestion(){}
+    private void  multipleQuestion(){
+     question =  numOne + " * " + numTwo + "?";
+     answer = numOne * numTwo;
+    }
+    private void divideQuestion(){}
     
 }

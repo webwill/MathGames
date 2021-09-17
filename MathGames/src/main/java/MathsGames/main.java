@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package WilliamWall;
+package MathsGames;
 
 /**
  *
@@ -14,7 +14,7 @@ package WilliamWall;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class main {
+public class Main {
    
    
     
@@ -32,6 +32,7 @@ public class main {
        
        while(true){
        System.out.println("Hoe hard do you want the sums to be? (TYPE: HARD, MEDIUM OR EASY)");
+       
        difficulty = scanner.nextLine();
         
            //Validate the user input
@@ -70,6 +71,9 @@ public class main {
        
        //Tell the user their score and end the game"!
        System.out.println("Your score is " + score.getScore());
+       questionReport(questions);
        System.exit(0);
   }
+  //The questionReport method is user to inform the user of their performance.
+  public static void questionReport(ArrayList<Question> questions){}
 }
