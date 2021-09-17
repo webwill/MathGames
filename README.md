@@ -3,5 +3,5 @@
 
 # TODO List
 * Implement Timer
-* Finish implementing all the questions
 * User Reporting 
+* Creating UI
