@@ -10,7 +10,7 @@ package MathsGames;
  */
 public class Question {
     
-    private int range,max,min,numOne,numTwo,answer,operator;
+    private int range,max,min,numOne,numTwo,answer,operator,userAnswer;
     private String question;
     
     public Question(String difficulty){
@@ -58,11 +58,16 @@ public class Question {
     
     public boolean answerQuestion(int ans){
         //check user's answer againest actual answer
+        userAnswer = ans;
         return answer == ans;
     }
     
     
     public int getAnswer(){return answer;}
+    
+    public int getUserAnswer(){
+        return userAnswer;
+    }
     
     private void addQuestion(){
      question =  numOne + " + " + numTwo + "?";

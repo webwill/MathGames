@@ -75,5 +75,14 @@ public class Main {
        System.exit(0);
   }
   //The questionReport method is user to inform the user of their performance.
-  public static void questionReport(ArrayList<Question> questions){}
+  public static void questionReport(ArrayList<Question> questions){
+  
+      System.out.println("\n\n ****Game Result Report **** \n\n");
+      for(int i = 0; i < questions.size(); i++){
+           Question q = questions.get(i);
+          System.out.println("\n Q"+i+ ". " + q.getQuestion());
+          System.out.println("\n Your Answer: " + q.getUserAnswer() + "\n Corrent Answer:" + q.getAnswer());
+          
+      }
+  }
 }
