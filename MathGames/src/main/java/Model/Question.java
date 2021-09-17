@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MathsGames;
+package Model;
 /**
  *
  * @author willi
@@ -26,7 +26,7 @@ public class Question {
            break;
            
            case "easy":
-           max = 15;
+           max = 5;
            min = 1;
            break;
     }
@@ -73,11 +73,22 @@ public class Question {
      question =  numOne + " + " + numTwo + "?";
      answer = numOne + numTwo;
     }
-    private void subQuestion(){}
+    private void subQuestion(){
+        if(numOne < numTwo){
+            question = numTwo+  " - "+ numOne;
+            answer = numTwo - numOne;
+        }else{
+            question = numOne+  " - "+ numTwo;
+            answer = numOne- numTwo;
+        }
+    }
     private void  multipleQuestion(){
      question =  numOne + " * " + numTwo + "?";
      answer = numOne * numTwo;
     }
-    private void divideQuestion(){}
+    private void divideQuestion(){
+        question = (numTwo * numOne) + " / "+ numOne;
+        answer = (numTwo * numOne)  / numOne;
+    }
     
 }

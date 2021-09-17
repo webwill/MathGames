@@ -11,12 +11,11 @@ package MathsGames;
  */
 
 
+import Model.Question;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-   
-   
     
   public static void main(String[] args){
       
@@ -84,5 +83,7 @@ public class Main {
           System.out.println("\n Your Answer: " + q.getUserAnswer() + "\n Corrent Answer:" + q.getAnswer());
           
       }
+      System.out.println("\n\n Your Score is " + Score.getInstance().getScore());
+      
   }
 }
