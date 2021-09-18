@@ -12,6 +12,7 @@ package Controller;
 
 
 import Model.Question;
+import Model.Score;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,7 +28,6 @@ public class Main {
        Score score = Score.getInstance();
        
        Scanner scanner = new Scanner(System.in);
-       
        
        while(true){
        System.out.println("Hoe hard do you want the sums to be? (TYPE: HARD, MEDIUM OR EASY)");
