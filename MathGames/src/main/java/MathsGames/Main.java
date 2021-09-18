@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package MathsGames;
 
 /**
  *
@@ -11,12 +11,16 @@ package Controller;
  */
 
 
-import Model.Question;
+
+import MathsGames.Question;
 import Model.Score;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+   
+   
     
   public static void main(String[] args){
       
@@ -83,7 +87,5 @@ public class Main {
           System.out.println("\n Your Answer: " + q.getUserAnswer() + "\n Corrent Answer:" + q.getAnswer());
           
       }
-      System.out.println("\n\n Your Score is " + Score.getInstance().getScore());
-      
   }
 }
